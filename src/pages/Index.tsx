@@ -35,22 +35,35 @@ const Index = () => {
         </div>
         
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center animate-fade-in">
-            <h1 className="text-5xl md:text-7xl font-black mb-6 leading-tight">
-              Создаём <span className="text-gradient">магию анимации</span> с искусственным интеллектом
-            </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Фантастические персонажи, музыкальные клипы и волшебные видеоролики — всё это реальность с нейросетями
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" onClick={() => scrollToSection('contact')} className="bg-primary hover:bg-primary/90 text-lg px-8 py-6 glow">
-                <Icon name="Sparkles" className="mr-2" size={20} />
-                Начать проект
-              </Button>
-              <Button size="lg" variant="outline" onClick={() => scrollToSection('process')} className="text-lg px-8 py-6 border-primary/50 hover:bg-primary/10">
-                <Icon name="Play" className="mr-2" size={20} />
-                Как мы работаем
-              </Button>
+          <div className="grid md:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
+            <div className="text-left animate-fade-in">
+              <h1 className="text-5xl md:text-7xl font-black mb-6 leading-tight">
+                Создаём <span className="text-gradient">магию анимации</span> с искусственным интеллектом
+              </h1>
+              <p className="text-xl md:text-2xl text-muted-foreground mb-8">
+                Фантастические персонажи, музыкальные клипы и волшебные видеоролики — всё это реальность с нейросетями
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button size="lg" onClick={() => scrollToSection('contact')} className="bg-primary hover:bg-primary/90 text-lg px-8 py-6 glow">
+                  <Icon name="Sparkles" className="mr-2" size={20} />
+                  Начать проект
+                </Button>
+                <Button size="lg" variant="outline" onClick={() => scrollToSection('process')} className="text-lg px-8 py-6 border-primary/50 hover:bg-primary/10">
+                  <Icon name="Play" className="mr-2" size={20} />
+                  Как мы работаем
+                </Button>
+              </div>
+            </div>
+            
+            <div className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
+              <div className="relative group">
+                <div className="absolute -inset-4 bg-gradient-to-r from-primary to-secondary rounded-3xl blur-2xl opacity-30 group-hover:opacity-50 transition-opacity animate-pulse-glow" />
+                <img 
+                  src="https://cdn.poehali.dev/files/b31bff97-4266-4dbb-8b0e-d71bd6693b4f.jpg" 
+                  alt="Музыкальный лев с гитарой" 
+                  className="relative rounded-3xl w-full shadow-2xl hover-scale"
+                />
+              </div>
             </div>
           </div>
         </div>
